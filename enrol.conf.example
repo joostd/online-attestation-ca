@@ -1,0 +1,33 @@
+# enrol.conf - Online attestation CA demo configuration file
+
+### CA settings
+
+# online CA location
+CA=http://127.0.0.1:8000
+
+### OIDC settings
+
+# Using Google as the OpenID Provider
+OIDC_OP=https://accounts.google.com
+
+# Obtain a client ID and secret from your OpenID Provider
+# Or, use someone else's, for instance
+#   https://smallstep.com/docs/step-cli/basic-crypto-operations/#obtain-oauth-oidc-identity-tokens
+
+# Your client ID:
+#CLIENT_ID="123456789-abcdefg.apps.googleusercontent.com"
+# Your client secret:
+#CLIENT_SECRET=myclientsecret
+
+# OIDC redirect settings
+PORT=3000
+REDIRECT_URI=http://localhost:$PORT
+
+### SSH key settings
+
+# The keytype to generate (default is ecdsa-sk)
+#KEYTYPE="ed25519-sk"
+
+# SSH application to distinguish different resident keys for SSH
+# for instance:
+APPLICATION=ssh:test

@@ -1,0 +1,4 @@
+requests
+fido2
+PyJWT
+Flask
